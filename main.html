@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="__range __range-step __range-step-popup">
+        <input value="3" type="range" max="15" min="0" step="5" list="ticks1">
+        <datalist id="ticks1">
+          <option value="0">0</option>
+          <option value="5">$5</option>
+          <option value="10">$10</option>
+          <option value="15">$15</option>
+        </datalist>
+    <output class="__range-output-square"></output>
+</div>
+
+
+<div class="__range __range-step __range-step-popup">
+        <input value="3" type="range" max="4" min="1" step="1" list="ticks2">
+        <datalist id="ticks2">
+          <option value="1">Very bad</option>
+          <option value="2">Bad</option>
+          <option value="3">Good</option>
+          <option value="4">Excellent</option>
+        </datalist>
+        <output class="__range-output-square"></output>
+</div>
+<script>
+document.querySelectorAll(".__range-step").forEach(function(ctrl) {
+	var el = ctrl.querySelector('input');
+	var output = ctrl.querySelector('output');
+	var newPoint, newPlace, offset;
+	el.oninput =function(){
+		// colorize step options
+		ctrl.querySelectorAll("option").forEach(function(opt) {
+			if(opt.value<=el.valueAsNumber)
+				opt.style.backgroundColor = 'green';
+
+			else
+				opt.style.backgroundColor = '#aaa';
+		});
+		// colorize before and after
+		var valPercent = (el.valueAsNumber  - parseInt(el.min)) / (parseInt(el.max) - parseInt(el.min));
+		var style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+
+		valPercent+', green), color-stop('+
+		valPercent+', #aaa));';
+		el.style = style;
+
+		// Popup
+    if((' ' + ctrl.className + ' ').indexOf(' ' + '__range-step-popup' + ' ') > -1)
+    {
+			var selectedOpt=ctrl.querySelector('option[value="'+el.value+'"]');
+			output.innerText= selectedOpt.text;
+			output.style.left = "50%";
+			output.style.left = ((selectedOpt.offsetLeft + selectedOpt.offsetWidth/2) - output.offsetWidth/2) + 'px';
+    }
+	};
+	el.oninput();
+});
+
+window.onresize = function(){
+	document.querySelectorAll(".__range").forEach(function(ctrl) {
+		var el = ctrl.querySelector('input');
+		el.oninput();
+	});
+};
+</script>
+
+</body>
+</html>
