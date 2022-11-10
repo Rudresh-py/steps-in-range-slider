@@ -5,7 +5,7 @@
 	background-color: #aaa;
 	height: 3px;
 	width: 437px;
-	margin: 10px auto;
+	margin: 2px auto;
 }
 .__range input::-webkit-slider-thumb
 {
@@ -79,7 +79,7 @@
 	/* hide text */
 	white-space: nowrap;
   padding:0;
-  line-height: 50px;
+  line-height: 55px;
 }
 
 
