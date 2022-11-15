@@ -1,130 +1,135 @@
-.__range input
-{
+.__range input {
   outline: none;
-	-webkit-appearance: none;
-	background-color: #aaa;
-	height: 3px;
-	width: 437px;
-	margin: 2px auto;
+  -webkit-appearance: none;
+  background-color: #aaa;
+  height: 3.5px;
+  width: 311px;
+  margin: 10px 10px 10px -38px;
 }
-.__range input::-webkit-slider-thumb
-{
-	-webkit-appearance: none;
-	width: 20px;
-	height: 20px;
-	background-color: green;
-	border-radius: 50%;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
+.__range input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #62b112;
+  border-radius: 50%;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
-.__range input::-moz-range-thumb
-{
-	-webkit-appearance: none;
-	width: 20px;
-	height: 20px;
-	background-color: green;
-	border-radius: 50%;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
+.__range input::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #62b112;
+  border-radius: 50%;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
-.__range input::-ms-thumb
-{
-	-webkit-appearance: none;
-	width: 20px;
-	height: 20px;
-	background-color: green;
-	border-radius: 50%;
-	cursor: -moz-grab;
-	cursor: -webkit-grab;
-}
-.__range-step{
-	position: relative;
+.__range input::-ms-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #62b112;
+  border-radius: 50%;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 
-.__range-max{
-	float: right;
+.__range-step {
+  position: relative;
+  width: 350px;
+  margin: 0 40px;
 }
-.__range-step input::-webkit-slider-thumb
-{
-	background: transparent;
+.__range-step input::-webkit-slider-thumb {
+  background: transparent;
 }
-.__range-step input::-moz-range-thumb
-{
-	background: transparent;
+.__range-step input::-moz-range-thumb {
+  background: transparent;
 }
-.__range-step input::-ms-thumb
-{
-	background: transparent;
+.__range-step input::-ms-thumb {
+  background: transparent;
 }
 .__range-step datalist {
-	position:relative;
-	display: flex;
-	justify-content: space-between;
-	height: auto;
-	bottom: 16px;
-	/* disable text selection */
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
-	/* disable click events */
-	pointer-events:none;
-	margin: 0px 856px 0px 0px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  bottom: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  margin: -7px 0px 0px -115PX;
 }
 .__range-step datalist option {
-	width: 20px;
-	height: 20px;
-	min-height: 10px;
-	border-radius: 100px;
-	/* hide text */
-	white-space: nowrap;
-  padding:0;
-  line-height: 55px;
+  width: 21px;
+  height: 21px;
+  min-height: 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  padding: 0;
+  line-height: 60px;
 }
 
+.__range-max {
+  float: right;
+}
 
- .__range-step-popup output
-{
-	position: absolute;
-	background-color: green;
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	color: white;
-	border-radius: 100px;
-	display: inline-block;
-	font-size:12px;
-	bottom: 121%;
-	left: 0;
-	vertical-align: middle;
-	line-height: 30px;
+.__range-step-popup {
+  margin: 40px 40px;
 }
-.__range-step-popup .__range-output-square{
-	padding: 0 5px;
-	min-width: 25px;
-	width: auto !important;
-	border-radius: 5px !important;
+
+.__range-step-popup output {
+  position: absolute;
+  background-color: #62b112;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  border-radius: 100px;
+  display: inline-block;
+  font-size: 12px;
+  top: 90%;
+  left: 0;
+  margin: 0px 0px 0px 0px;
+  vertical-align: middle;
+  line-height: 30px;
 }
-.__range-step-popup output:after
-{
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-top: 10px solid green;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	top: 90%;
-	left: 50%;
-	margin-left: -10px;
-	margin-top: -1px;
+.__range-step-popup .__range-output-square {
+  padding: 0 5px;
+  min-width: 40px;
+  width: auto !important;
+  border-radius: 5px !important;
 }
-.__range-step-popup datalist{
-  overflow:hidden;
+.__range-step-popup datalist {
+  overflow: hidden;
 }
-.__range-step{
-  margin:0 40px;
+
+.__range-step-button {
+  margin: -37px 0px 12px 350px;
 }
-.__range-step-popup{
-  margin:40px 40px;
+.__range-step-button button {
+  font-size: 12px;
+  background: #62b112;
+  border: 1px solid #ccc;
+  padding: 4px 9px;
+  height: 28px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px 0px 0px 0px;
+}
+
+.price-free p {
+  justify-content: space-evenly;
+  font-weight: bold;
+  margin: 0px 0px -19px -83px !important;
+}
+
+.price-15 p {
+  justify-content: space-evenly;
+  font-weight: bold;
+  margin: 0px 0px -27px 283px !important;
 }
